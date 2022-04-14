@@ -11,12 +11,14 @@ function App() {
   //read
   axios.get(`https://jsonplaceholder.typicode.com/users`)
     .then(request=>{
+      console.log("READING DATA")
       console.log(request.data)
     })
   
   //create
   axios.post(`https://jsonplaceholder.typicode.com/users`, {user})
     .then(request=>{
+      console.log("CREATING DATA")
       console.log(request.data)
     })
   
@@ -24,12 +26,14 @@ function App() {
   const id = 3
   axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`)
     .then(request=>{
+      console.log("DELETING DATA")
       console.log(request.data)
     })
 
   //update
   axios.put(`https://jsonplaceholder.typicode.com/users/1`, {user})
     .then(request=>{
+      console.log("UPDATING DATA")
       console.log(request.data)
     })
 
